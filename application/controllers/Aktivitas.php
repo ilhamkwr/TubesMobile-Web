@@ -34,6 +34,36 @@ class Aktivitas extends CI_Controller {
 		$this->load->view('aktivitas_tambah', $data);
 	}
 
+	public function TambahMatkul()
+	{
+		$this->session->set_flashdata('activemenu','aktivitas');
+		$this->load->view('tambah_matkul');	
+	}
+
+	public function matkulplus()
+	{
+		$matkul = $this->input->post('nama');
+		$data = array('nama_matkul' => $matkul);
+		if ($this->db->insert('tbmatkul', $data)) {
+			$tambahmatkul = array(
+	        		'pesan1' =>	'Berhasil Menambah Mata Kuliah', 
+	        		'pesan2' =>	'success',
+	        		'pesan3' =>	'Sukses!',
+	        		'pesan4' =>	'btn btn-success'
+	        	);
+		}
+		else{
+			$tambahmatkul = array(
+        		'pesan1' =>	'Gagal Menambah Mata Kuliah', 
+        		'pesan2' =>	'error',
+        		'pesan3' =>	'Error!',
+        		'pesan4' =>	'btn btn-danger'
+        	);
+		}
+		$this->session->set_flashdata('pesan', $tambahmatkul);
+		redirect('aktivitas');
+	}
+
 	public function aktivitas_tambah_do()
 	{
 		$matkul = $this->input->post('matkul');

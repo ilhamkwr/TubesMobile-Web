@@ -38,7 +38,8 @@
 						<div class="col-md-12">
 							<div class="card">								
 								<div class="card-body">
-									<button class="btn btn-primary" onclick='window.location.href = "<?php echo base_url("aktivitas/Tambah") ?>"' style="margin-left: 15px;margin-top: 5px;margin-bottom: 5px;"><i class="fas fa-plus"></i> <span style="font-weight: bold;">Tambah </span></button>
+									<button class="btn btn-primary" onclick='window.location.href = "<?php echo base_url("aktivitas/Tambah") ?>"' style="margin-left: 15px;margin-top: 5px;margin-bottom: 5px;"><i class="fas fa-plus"></i> <span style="font-weight: bold;">Tambah Jadwal</span></button>&nbsp;
+									<button class="btn btn-primary" onclick='window.location.href = "<?php echo base_url("aktivitas/TambahMatkul") ?>"' style="margin-left: 15px;margin-top: 5px;margin-bottom: 5px;"><i class="fas fa-plus"></i> <span style="font-weight: bold;">Tambah Matakuliah</span></button>
 									<div class="table-responsive">
 										<table id="add-row" class="display table table-striped table-hover" >
 											<thead>
