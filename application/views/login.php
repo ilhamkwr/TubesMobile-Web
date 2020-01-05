@@ -80,7 +80,7 @@
             <div class="text-light p-5 pb-2">
               <div class="mb-5 pb-3">
                 <h1 class="mb-2 display-4 font-weight-bold">SENSASIQ</h1>
-                <h5 class="font-weight-normal text-muted-transparent">Kediri, Indonesia</h5>
+                <h5 class="font-weight-normal text-muted-transparent">Universitas Sumatera Utara, Indonesia</h5>
               </div>
             </div>
           </div>
