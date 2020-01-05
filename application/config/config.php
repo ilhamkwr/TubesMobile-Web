@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$config['base_url'] = 'http://localhost/sensasiq';
+$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/sensasiq';
 
 /*
 |--------------------------------------------------------------------------
