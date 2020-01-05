@@ -61,6 +61,7 @@
 												<span style="padding: 5px"></span>
 												<input type="button" class="btn btn-primary btn-border" onclick="location.href='<?php echo base_url('aktivitas') ?>';" value="Batal">
 											</div>
+											
 										</div>
 									</div>
 									</form>

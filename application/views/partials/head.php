@@ -20,6 +20,9 @@
 
 	<!-- Fonts and icons -->
 	<script src="<?php echo base_url('assets/js/plugin/webfont/webfont.min.js') ?> "></script>
+	<script src="<?php echo base_url('assets/js/core/bootstrap.min.js') ?>"></script>
+	<script src="<?php echo base_url('assets/js/core/jquery.3.2.1.min.js') ?>"></script>
+
 	<script>
 		WebFont.load({
 			google: {"families":["Lato:300,400,700,900"]},
@@ -32,6 +35,7 @@
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css') ?> ">
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/bstimepicker.css') ?> ">
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/atlantis.min.css') ?> ">
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->

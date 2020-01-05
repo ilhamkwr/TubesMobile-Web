@@ -25,6 +25,50 @@ class Aktivitas extends CI_Controller {
 		}
 	}
 
+	public function tambah()
+	{
+		$this->session->set_flashdata('activemenu','aktivitas');
+		$data['jadwal'] = $this->JadwalM->tampil_jadwal($this->session->nip);
+		$data['matkul']=$this->db->get('tbmatkul')->result();
+		$data['kelas']=$this->db->get('tbkelas')->result();
+		$this->load->view('aktivitas_tambah', $data);
+	}
+
+	public function aktivitas_tambah_do()
+	{
+		$matkul = $this->input->post('matkul');
+		$kelas = $this->input->post('kelas');
+		$utcwaktu = $this->input->post('waktu');
+
+		$dt = strtotime($utcwaktu);
+		$waktu = date('Y-m-d h:i:s', $dt);
+
+		$data = array(
+			'id_matkul' => $matkul,
+			'id_kelas' => $kelas,
+			'waktu' => $waktu,
+			'nip' => $this->session->nip
+		);
+		if ($this->db->insert('tbjadwal', $data)) {
+			$tambahjadwal = array(
+	        		'pesan1' =>	'Berhasil Menambah jadwal', 
+	        		'pesan2' =>	'success',
+	        		'pesan3' =>	'Sukses!',
+	        		'pesan4' =>	'btn btn-success'
+	        	);
+		}
+		else{
+			$tambahjadwal = array(
+        		'pesan1' =>	'Gagal Menambah jadwal', 
+        		'pesan2' =>	'error',
+        		'pesan3' =>	'Error!',
+        		'pesan4' =>	'btn btn-danger'
+        	);
+		}
+		$this->session->set_flashdata('pesan', $tambahjadwal);
+		redirect('aktivitas');
+	}
+
 	public function update_jadwal(){
 		$updatejadwal = array();
 		$waktu = $this->input->post('waktu');
